@@ -1,0 +1,511 @@
+@font-face {
+  font-family: 'aquifer';
+  src: url('/Fonts/Aquifer.ttf');
+}
+
+@font-face {
+  font-family: 'augusta';
+  src: url('/Fonts/Augusta.ttf');
+}
+
+body {
+  margin: 0;
+}
+
+.btn {
+  cursor: url('/Images/Selection%20Page/mouseglowinghover.png'), auto;	
+}
+
+* {
+  cursor: url('/Images/Selection%20Page/mouse.png'), auto;	
+  font-family: aquifer;
+  overflow: hidden;
+  text-transform: none !important;
+}
+
+.scroller {
+  height: 100%;
+  padding: 100px 0;    
+  width: fit-content;
+  display: inline-block;
+}
+
+.scrollbar {
+    width: fit-content;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 29px;
+    grid-template-rows: 50px 1fr 50px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "scrollbartop"
+      "scrollbarbody"
+      "scrollbarbottom";
+}
+
+.scrollbartop { 
+  background: url("/Images/Selection%20Page/scrollbartop.png");
+}
+
+.scrollbarbottom { 
+  background: url("/Images/Selection%20Page/scrollbarbottom.png");
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  transform: translate(30px, 0px) rotate(90deg);
+  transform-origin: 0% 0%;
+  height: 30px;
+  background: #FFFFFF00;
+  background-image: url("/Images/Selection%20Page/scrollbarbodyrotated.png");
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none; 
+  width: 51px;
+  height: 30px;
+  background-image: url("/Images/Selection%20Page/scrollbarsliderrotated.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: url('/Images/Selection%20Page/mouseglowinghover.png'), auto;	
+}
+
+
+.listcontainer {
+  margin: 50px 0; 
+  padding: 0 30px; 
+  width: calc(100% - 30px);
+  overflow-y: scroll !important;
+}
+
+.scrollcontainer {
+  width: 30px;
+}
+
+* {
+  --bs-gutter-x: 0rem !important;
+  --bs-gutter-y: 0 !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.listcontainer::-webkit-scrollbar, .quotecontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.listcontainer, .quotecontainer {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.minipic {
+  width: 100%;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.minititle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center; 
+  height: 100%;
+  font-size: calc(6pt + 1.5vw);
+}
+
+
+.ruler {
+  margin: 20px 30%;
+}
+
+.minicontainer:hover {
+  transform: scale(1.02);
+  color: #444;
+}
+.minicontainer.selected {
+  transform: scale(1.05);
+  color: #444;
+  
+}
+
+
+.minicontainer {
+  transition: .5s;
+  cursor: url('/Images/Selection%20Page/mouseglowinghover.png'), auto !important;	
+}
+.minicontainer, .menu {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.imgcontainer {
+  position: relative;
+  
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  left: 0;
+  top: 0;
+}
+
+
+.detail_image {
+  position: absolute;
+  max-height: 100%;
+  max-width: 100%;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quotecontainer {
+  overflow-y: scroll;
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .scrollcontainer {
+    display: none;
+  }
+  .slider {
+    width: calc(100vh - 356px);
+  }
+  .listcontainer {
+    height: calc(100vh - 156px);
+  }
+
+  .imgcontainer {
+    max-height: 30%;
+    max-width: 100%;
+    height: 30%;
+  }
+
+  .quotecontainer {
+    height: calc(70% - 130px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .slider {
+    width: calc(100vh - 412px);
+  }
+  .listcontainer {
+    height: calc(100vh - 212px);
+  }
+  
+  .imgcontainer {
+    max-height: 55%;
+    max-width: 100%;
+    height: 55%;
+  }
+
+  .quotecontainer {
+    height: calc(45% - 130px);
+  }
+}
+
+.o15 {
+  opacity: 0.15;
+}
+
+.o55 {
+  opacity: 0.55;
+}
+
+.o97 {
+  opacity: 0.97;
+}
+
+.alignbottomright {
+  position: absolute;
+  width: 286px;
+  height: 46px;
+  bottom: 75;
+  right: 75;
+}
+.aligntopright {
+  position: absolute;
+  width: 23px;
+  height: 16px;
+  top: 75;
+  right: 75;
+}
+
+.head {
+  font-size: calc(8pt + 2vw);
+  margin: 0 0 30px 0;
+}
+
+.quote {
+  margin-left: 40px;
+  font-size: calc(6pt + 1.2vw);
+}
+
+.backbtn {
+  background-image: url("/Images/Selection%20Page/backbutton-opacity70.png");
+  width: 23;
+  height: 16;
+  opacity: 0.7;
+  cursor: url('/Images/Selection%20Page/mouseglowinghover.png'), auto;	
+  font-weight: 300;
+  transition: 0.5s;
+}
+
+.custombtn {
+  width: 100%;
+  height: 100%;
+  background-image: url("/Images/Selection%20Page/birthsignbutton.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: augusta;
+  font-size: 1.75rem;
+  font-weight: 300;
+  text-transform: none;
+  transition: 0.5s;
+}
+
+.custombtn:hover, .backbtn:hover{
+  color: black;
+  opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+  
+  .menu {
+    height: 100vh;
+    width: 100vw;
+  }
+  .bgd {
+    background-color: #00000066;
+    border-radius: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu {
+    margin-left: calc(50vw - 200px);
+    margin-top: calc(50vh - 300px);
+    height: 400px;
+    width: 400px;
+  }
+  .bgd {
+    background-color: #00000066;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    margin-left: 100px;
+    margin-top: 140px;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+.menu-button>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-1>.icon {
+  background-image: url("/Images/Main%20Menu/play-constellationv2.png");
+}
+.button-2>.icon {
+  background-image: url("/Images/Main%20Menu/settings-constellationv2.png");
+}
+.button-3>.icon {
+  background-image: url("/Images/Main%20Menu/profile-constellationv2.png");
+}
+
+.button-1:hover>.icon {
+  filter:  drop-shadow(0px 0px 6px white);
+}
+.button-2:hover>.icon {
+  filter:  drop-shadow(0px 0px 6px white);
+}
+.button-3:hover>.icon {
+  filter:  drop-shadow(0px 0px 6px white);
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 28px 1fr 28px;
+    grid-template-rows: 28px 1fr 28px;
+  }
+  .grid-container-home {
+    grid-template-columns: 1fr;
+    grid-template-rows: 28px 1fr 28px;
+  }
+  .grid-container-player {
+    grid-template-columns: 1fr;
+    grid-template-rows: 28px 1fr 28px;
+  }
+  .top, .bottom, .tophome, .bottomhome, .topplayer, .bottomplayer{
+    background-size: auto 100% !important;
+  }
+  .left, .right {
+    background-size: 100% auto !important;
+  }
+  .topleft, .topright, .bottomleft, .bottomright {
+    background-size: 100% 100% !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 56px 1fr 56px;
+    grid-template-rows: 56px 1fr 56px;
+  }
+  .grid-container-home {
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 1fr 56px;
+  }
+  .grid-container-player {
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 1fr 56px;
+  }
+
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "topleft top topright"
+    "left content right"
+    "bottomleft bottom bottomright";
+}
+
+.grid-container-home {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tophome"
+    "contenthome"
+    "bottomhome";
+}
+.grid-container-player {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "topplayer"
+    "contentplayer"
+    "bottomplayer";
+}
+
+
+
+.topplayer { 
+  background: url("/Images/Video%20Page/videopage-bordertop.jpg");
+}
+.contentplayer { 
+  background-color: black;
+}
+.bottomplayer { 
+  background: url("/Images/Video%20Page/videopage-borderbottom.jpg");
+}
+
+.tophome { 
+  background: url("/Images/Main%20Menu/border-top.jpg");
+}
+.contenthome { 
+  background: url("/Images/Main%20Menu/mainmenuscreen.jpg");
+  background-position: center;
+}
+.bottomhome { 
+  background: url("/Images/Main%20Menu/border-bottom.jpg");
+}
+
+
+.topleft { 
+  background: url("/Images/Selection%20Page/topleft.jpg");
+}
+.top { 
+  background: url("/Images/Selection%20Page/top.jpg");
+}
+.topright { 
+  background: url("/Images/Selection%20Page/topright.jpg");
+}
+
+.left { 
+  background: url("/Images/Selection%20Page/left.jpg");
+}
+
+.content { 
+  background: url("/Images/Selection%20Page/scroll.jpg");
+}
+
+.right { 
+  background: url("/Images/Selection%20Page/right.jpg");
+}
+
+.bottomleft { 
+  background: url("/Images/Selection%20Page/bottomleft.jpg");
+}
+.bottom { 
+  background: url("/Images/Selection%20Page/bottom.jpg");
+}
+.bottomright { 
+  background: url("/Images/Selection%20Page/bottomright.jpg");
+}
+
+.home * {
+  color: white;;
+  text-shadow: 0px 0px 6px #ffffff66, 0px 0px 6px #cccccc66;
+}
+
+.menu-button {
+  cursor: url('/Images/Selection%20Page/mouseglowinghover.png'), auto;	
+}
+.menu-button * {
+  transition: .5s;
+}
+
+.menu-button:hover>.h3 {
+  text-shadow: 0px 0px 6px #ffffff, 0px 0px 6px #cccccc;
+}
+.h3 {
+  padding: 10px;
+}
+
+.preview { 
+  opacity: 0.95;
+  cursor: url('/Images/Selection%20Page/mouseglowinghover.png'), auto;	
+  margin: 0 20px;
+  transition: 0.5s;
+}
+.preview:hover {
+  transform: scale(1.05);
+}

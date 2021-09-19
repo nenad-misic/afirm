@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/affirmation/static/js/main.9755bbf4.chunk.js",
+    "main.js.map": "/affirmation/static/js/main.9755bbf4.chunk.js.map",
+    "runtime-main.js": "/affirmation/static/js/runtime-main.de50d8d4.js",
+    "runtime-main.js.map": "/affirmation/static/js/runtime-main.de50d8d4.js.map",
+    "static/js/2.8ae258fd.chunk.js": "/affirmation/static/js/2.8ae258fd.chunk.js",
+    "static/js/2.8ae258fd.chunk.js.map": "/affirmation/static/js/2.8ae258fd.chunk.js.map",
+    "index.html": "/affirmation/index.html",
+    "precache-manifest.9cc303985aa9a18cce81efb928dfdac9.js": "/affirmation/precache-manifest.9cc303985aa9a18cce81efb928dfdac9.js",
+    "service-worker.js": "/affirmation/service-worker.js",
+    "static/js/2.8ae258fd.chunk.js.LICENSE.txt": "/affirmation/static/js/2.8ae258fd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de50d8d4.js",
+    "static/js/2.8ae258fd.chunk.js",
+    "static/js/main.9755bbf4.chunk.js"
+  ]
+}
